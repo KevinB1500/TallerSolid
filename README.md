@@ -1,4 +1,5 @@
 ﻿# TallerSolid
+1. En esta sección no se cumple el Open-Closed Principle, ya que de querer extender las clases de Helado y Pastel habría que hacer modificaciones en cada uno de ellas al querer añadir algo nuevo, al hacerlas depender de una clase padre como Postre, simplemente las subclases implementan los métodos constructores con sus precios respectivos.
 
 2. En esta sección no se cumple el principio de inversión de dependencias ya que la clase OperacionesAderezo realizaba operaciones concretas para las clases Helado y Pastel cuando estas operaciones se pueden poner como metodos en la clase Postre.
 
