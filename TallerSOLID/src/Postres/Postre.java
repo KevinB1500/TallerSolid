@@ -29,6 +29,13 @@ public class Postre {
     public double getPrecioParcial() {
         return precioParcial;
     }
-
+    
+    public static void anadirAderezo(Postre postre,Aderezo aderezo){
+        postre.getAderezos().add(aderezo);
+    }
+    
+    public static void quitarAderezo(Postre postre,Aderezo aderezo){
+        postre.getAderezos().remove(aderezo);
+    }
     
 }
