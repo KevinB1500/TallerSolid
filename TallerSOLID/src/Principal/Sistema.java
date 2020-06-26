@@ -27,16 +27,20 @@ public class Sistema {
         
         // Producir Helado
         Helado helado_vainilla = new Helado("Vainilla");
-        Helado.anadirAderezo(helado_vainilla, new Crema());
-        Helado.anadirAderezo(helado_vainilla, new Frutilla());
+        Crema c=new Crema();
+        c.setNombre("crema");
+        Helado.anadirAderezo(helado_vainilla, c);
+        Frutilla f=new Frutilla();
+        f.setNombre("frutilla");
+        Helado.anadirAderezo(helado_vainilla, f);
         System.out.println(helado_vainilla);
         mnj_leche.cambiarTipoLeche(leche, helado_vainilla);
         System.out.println(mnj_precio.showPrecioFinal(helado_vainilla));
         
         // Producir Pastel
         Pastel pastel_chocolate = new Pastel("Chocolate");
-        Pastel.quitarAderezo(pastel_chocolate, new Crema());
-        Pastel.anadirAderezo(pastel_chocolate, new Frutilla());
+        Pastel.quitarAderezo(pastel_chocolate, c);
+        Pastel.anadirAderezo(pastel_chocolate, f);
         System.out.println(pastel_chocolate);
         mnj_leche.cambiarTipoLeche(leche, pastel_chocolate);
         System.out.println(mnj_precio.showPrecioFinal(pastel_chocolate));
